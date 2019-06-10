@@ -51,14 +51,9 @@ The core modules being used in install are as follows;
 
 
 ## Step 1: Building
-The first step is to build or pull an image. To build an image, simply run the Docker build command:
-```bash
-docker build -t openbridge/ob_proftpd .
-```
-Using Docker Hub:
-```bash
-docker pull openbridge/ob_proftpd
-```
+If you are interested in the Openbridge SFTP S3 Transfer Gateway, we provided a hosted version here: https://www.openbridge.com/data-pipeline/batch
+
+If you would like a self-service, self-hosted option, we do offer a license for Openbridge SFTP S3 Transfer Gateway. Contact us here for more details: https://www.openbridge.com/contact
 
 ## Step 2: Setting Up Your Environment
 
