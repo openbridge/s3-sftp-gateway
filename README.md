@@ -4,12 +4,12 @@
 # Openbridge SFTP S3 Transfer Gateway
 This is a Secure File Transfer Protocol (`SFTP`) service for the transfer of data to AWS S3. The SFTP S3 Transfer Gateway supports basic file transfers as well as creating data pipelines that allow you to deliver, process and route data sources to a target warehouse system like Amazon Redshift, Amazon Redshift Spectrum, Amazon Athena or even Google BigQuery. Consolidating your data to a warehouse allows you to easily use your favorite analytics tools like Tableau, QlikView, Mode or Looker.
 
-SFTP is based on the `SSH2` protocol, which encodes activity over a secure channel. Unlike `FTP`, `SSH2`  uses a single TCP connection and sends multiple transfers, or "channels", over that single connection. Use of SSH allows the Parcel SFTP S3 Transfer Gateway to been setup in HA configurations via HaProxy or AWS ELB.
+SFTP is based on the `SSH2` protocol, which encodes activity over a secure channel. Unlike `FTP`, `SSH2`  uses a single TCP connection and sends multiple transfers, or "channels", over that single connection. Use of SSH allows the Openbridge SFTP S3 Transfer Gateway to been setup in HA configurations via HaProxy or AWS ELB.
 
 
 # Use Cases
 
-What are some use cases for Parcel SFTP S3 Transfer Gateway?
+What are some use cases for Openbridge SFTP S3 Transfer Gateway?
 
 * File sharing between teams
 * Perfect for automated exports from internal systems like an ERP, ETL, MySQL, SQL Server, Oracle or other enterprise systems
@@ -251,9 +251,9 @@ MEMCACHE_HOST=
 ```
 
 # Setup And Configure User Accounts In Database
-Parcel currently supports public key and password authentication for both SFTP and SCP file transfer protocols. The server does not support any shell access. Also, not all SFTP commands are accepted.
+Openbridge currently supports public key and password authentication for both SFTP and SCP file transfer protocols. The server does not support any shell access. Also, not all SFTP commands are accepted.
 
-Users are created and stored outside of the Parcel application. Parcel uses MariaDB (MySQL) to store user account information. This ensures each Parcel container can scale horizontally. Spin up 30 Parcel container, each will connect securely to a backend database for authorizations, whitelists, blacklists, quotas and logs.
+Users are created and stored outside of the Openbridge application. Openbridge uses MariaDB (MySQL) to store user account information. This ensures each Openbridge container can scale horizontally. Spin up 30 Openbridge container, each will connect securely to a backend database for authorizations, whitelists, blacklists, quotas and logs.
 
 ## Step 1: Creating Accounts
 
@@ -521,7 +521,7 @@ More information on DNS blacklists can be found here: http://en.wikipedia.org/wi
 # Account Ban and Lockout
 Openbridge employs a dynamic "ban" lists that prevents the banned user or host from logging in to the server. This will occur if our system detects 4 incorrect login attempts. The ban will last for approximately 30 minutes at which time you can attempt to login again. If you continue to have difficulties please contact support.
 
-Parcel can also use **[Autoban](https://github.com/openbridge/ob_APP_autoban)**, a package that leverages `mod_wrap2` to detect malicious login attempts and ban them.
+Openbridge can also use **[Autoban](https://github.com/openbridge/ob_APP_autoban)**, a package that leverages `mod_wrap2` to detect malicious login attempts and ban them.
 
 # IP Blacklist and Whitelist
 Access can be controlled via `ftpd_allow` and `ftpd_deny` tables.
