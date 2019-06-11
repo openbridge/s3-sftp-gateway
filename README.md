@@ -234,7 +234,9 @@ If you ran a build and included the config within the build, there is no need to
 ### 7. Optional Settings
 See below for virus and malware scanning options.
 
-By default these are off. Memcache **only** applies to FTPES, which is used to cache TLS sessions. Clam AV can be resource intensive, so make sure it the environment you run it in is sized correctly.
+By default these are off. Memcache **only** applies to FTPES, which is used to cache TLS sessions. 
+
+Clam AV can be resource intensive, so make sure it the environment you run it in is sized correctly. We have a pre-built `clamd` Docker service here: https://github.com/openbridge/clamav
 
 While these services are supported they require external services to be configured, deployed and managed.  They are **not** included in this project.
 
